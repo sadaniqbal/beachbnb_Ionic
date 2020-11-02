@@ -6,6 +6,22 @@ const routes: Routes = [
   {
     path: '',
     component: Tab2Page,
+  },
+  {
+    path: 'offerdetail',
+    loadChildren: () => import('../tab2/offerdetail/offerdetail-routing.module').then( m => m.OfferdetailPageRoutingModule)
+  },
+  {
+    path: 'newoffer',
+    loadChildren: () => import('./newoffer/newoffer.module').then( m => m.NewofferPageModule)
+  },
+  {
+    path: 'offerdetail',
+    loadChildren: () => import('./offerdetail/offerdetail.module').then( m => m.OfferdetailPageModule)
+  },
+  {
+    path: 'editoffer',
+    loadChildren: () => import('./editoffer/editoffer.module').then( m => m.EditofferPageModule)
   }
 ];
 
